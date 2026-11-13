@@ -1,0 +1,11 @@
+baseURL = "https://sunshine-moonlight-setup.pages.dev/"
+languageCode = "en-us"
+title = "Sunshine & Moonlight Streaming Setup"
+enableRobotsTXT = true
+[params]
+description = "Set up Sunshine on your own Windows PC and Moonlight on phone, tablet, or TV, then fix black screen, controller, stutter, and audio faults."
+category = "Gaming"
+source = "sunshine-moonlight-setup"
+email = "hello@handytasklab.com"
+[markup.goldmark.renderer]
+unsafe = true
