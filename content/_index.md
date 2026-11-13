@@ -12,7 +12,7 @@ description: "Set up Sunshine on your own Windows PC and Moonlight on phone, tab
 <li>Encoder/network check, controller and audio test</li>
 <li>A repeatable launch checklist and one tested fallback</li></ul>
 <h2>Scope and boundaries</h2>
-<p>This is remote help for one computer and one playback or printing path. I do not change your router unless the chosen fix requires it and you approve it. I do not ask for account passwords; use a temporary session or attend the session.</p>
+<p>This is remote help for one host and one Moonlight client. I do not change your router unless the chosen fix requires it and you approve it. I do not ask for account passwords; use a temporary session or attend the session.</p>
 <h2>How the session works</h2>
 <p>You send the device, OS, exact symptom, and what you already tried. We confirm the scope and a fixed quote before booking. The session is screen-shared and recorded only with your consent. You receive a short handover note with the tested result and rollback steps.</p>
 <p><a href="/guides/sunshine-moonlight-setup/">Read the first troubleshooting guide</a> before booking if you want to check the basics yourself.</p>

@@ -1,15 +1,18 @@
 ---
 title: "Moonlight Black Screen After the Host Sleeps: What to Check First"
-description: "A practical first-pass check for Sunshine & Moonlight Streaming Setup."
+description: "Project-specific diagnosis and retest steps for sunshine-moonlight-setup."
 date: 2026-11-13
 ---
-<p>Sunshine and Moonlight are excellent when the host, encoder, network, and client agree. Most failures are one layer, not the whole stack. I test the host and one client before changing settings.</p>
-<h2>1. Reproduce the exact failure</h2>
-<p>Write down what works, what does not, and the last change. Test from the same device and network where the problem happens. A second device is useful only as a comparison, not as proof.</p>
-<h2>2. Check the layer before the app</h2>
-<p>Confirm the host is reachable, the account or device is allowed, and the local client can see the service. Then test the app setting. Changing three layers at once makes the result impossible to interpret.</p>
-<h2>3. Make one change and retest</h2>
-<p>Record the old value, apply one change, retest, and keep the result. If the change does not fix it, roll it back before trying the next path.</p>
-<h2>4. Handover test</h2>
-<p>Repeat the successful test after a restart or reconnect. A fix that only works in the current session is not ready for handover.</p>
-<p><a href="/">Back to the service page</a> · <a href="mailto:hello@handytasklab.com?subject=Sunshine%20&%20Moonlight%20Streaming%20Setup%20question&body=Source%3A%20sunshine-moonlight-setup">Ask about this exact symptom</a></p>
+<p>A black screen in Moonlight after the host sleeps is usually a display/session problem, not a broken encoder. The host may have no active display, may be locked, or may have stopped Sunshine. Test the host locally before changing Moonlight settings.</p>
+<h2>1. Confirm the host is awake and has a display</h2>
+<p>Move the mouse or press a key on the host. If the monitor is off or the PC is headless, attach a display or a dummy HDMI plug. On Windows, set sleep to Never for the test and disable “turn off display” temporarily. A headless GPU may stop producing a framebuffer.</p>
+<h2>2. Check Sunshine locally</h2>
+<p>Open the Sunshine web UI on the host (default <code>https://localhost:47990</code>). Confirm the service is running and the Applications list includes Desktop or Steam. Start a local stream once; if the host cannot capture its own desktop, Moonlight cannot either.</p>
+<h2>3. Wake path and session</h2>
+<p>If you use Wake-on-LAN, wake the host first, wait for Windows to reach the login screen, then connect Moonlight. A locked session can produce a black screen depending on the capture method. Log in locally or configure the host to auto-login for the test only.</p>
+<h2>4. Lower one variable at a time</h2>
+<p>Set 1080p/60 and 20 Mbps, force the host to the correct GPU, and try the Desktop app instead of a game. Check the Sunshine log for encoder or capture errors. Change one setting, reconnect, and record the result.</p>
+<h2>5. Retest after sleep</h2>
+<p>Put the host to sleep, wake it, wait 30 seconds, and reconnect. Repeat twice. Acceptance means Moonlight shows the desktop/game after a sleep cycle, controller input works, and audio is present. If it only works before sleep, the fix is not complete.</p>
+<h2>6. Rollback</h2>
+<p>Restore the original sleep/display settings and remove any temporary dummy plug or auto-login. Keep the Sunshine version and the one setting that fixed the path.</p>
