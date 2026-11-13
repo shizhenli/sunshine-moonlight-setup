@@ -1,7 +1,7 @@
 baseURL = "https://sunshine-moonlight-setup.pages.dev/"
 languageCode = "en-us"
 title = "Sunshine Moonlight Setup"
-enableRobotsTXT = true
+enableRobotsTXT = false
 disableKinds = ["taxonomy", "term"]
 [params]
 source = "sunshine-moonlight-setup"
