@@ -1,18 +1,44 @@
 ---
-title: "Moonlight Black Screen After the Host Sleeps: What to Check First"
-description: "Project-specific diagnosis and retest steps for sunshine-moonlight-setup."
-date: 2026-11-13
+title: 'Moonlight Black Screen After Sleep: Wake, Display, Encoder'
+description: A host-first check for Moonlight black screens after sleep, including display state, Sunshine encoder, audio, and controller verification.
+seo_title: Moonlight Black Screen After Windows Sleep
+seo_description: A host-first check for Moonlight black screens after sleep, including display state, Sunshine encoder, audio, and controller verification.
+keywords:
+- moonlight black screen after sleep
+- sunshine not waking
+- moonlight no video
+date: '2026-11-13'
+draft: false
+categories:
+- Game Streaming
+category_slug: game-streaming
 ---
-<p>A black screen in Moonlight after the host sleeps is usually a display/session problem, not a broken encoder. The host may have no active display, may be locked, or may have stopped Sunshine. Test the host locally before changing Moonlight settings.</p>
-<h2>1. Confirm the host is awake and has a display</h2>
-<p>Move the mouse or press a key on the host. If the monitor is off or the PC is headless, attach a display or a dummy HDMI plug. On Windows, set sleep to Never for the test and disable “turn off display” temporarily. A headless GPU may stop producing a framebuffer.</p>
-<h2>2. Check Sunshine locally</h2>
-<p>Open the Sunshine web UI on the host (default <code>https://localhost:47990</code>). Confirm the service is running and the Applications list includes Desktop or Steam. Start a local stream once; if the host cannot capture its own desktop, Moonlight cannot either.</p>
-<h2>3. Wake path and session</h2>
-<p>If you use Wake-on-LAN, wake the host first, wait for Windows to reach the login screen, then connect Moonlight. A locked session can produce a black screen depending on the capture method. Log in locally or configure the host to auto-login for the test only.</p>
-<h2>4. Lower one variable at a time</h2>
-<p>Set 1080p/60 and 20 Mbps, force the host to the correct GPU, and try the Desktop app instead of a game. Check the Sunshine log for encoder or capture errors. Change one setting, reconnect, and record the result.</p>
-<h2>5. Retest after sleep</h2>
-<p>Put the host to sleep, wake it, wait 30 seconds, and reconnect. Repeat twice. Acceptance means Moonlight shows the desktop/game after a sleep cycle, controller input works, and audio is present. If it only works before sleep, the fix is not complete.</p>
-<h2>6. Rollback</h2>
-<p>Restore the original sleep/display settings and remove any temporary dummy plug or auto-login. Keep the Sunshine version and the one setting that fixed the path.</p>
+
+<p>A black Moonlight frame after sleep is usually a host display or encoder problem, not a client decoder problem. Wake the host and inspect it before reinstalling the client.</p>
+<h2>Before you start</h2><ul>
+<li>Windows host with Sunshine</li>
+<li>One Moonlight client on the same network</li>
+<li>Access to the host display and Sunshine logs</li>
+<li>A game or desktop test</li>
+</ul>
+<h2>Step-by-step checks</h2>
+<h3>Step 1: Wake and confirm the host display</h3>
+<p>Wake the PC manually or with a wake-on-LAN tool, then look at the physical display. If Windows resumed without a display, reconnect the monitor or enable the virtual display before opening Moonlight.</p>
+<p><strong>Check:</strong> The host has an active display and Sunshine is running.</p>
+<h3>Step 2: Read the Sunshine log after resume</h3>
+<p>Note the encoder, capture, and audio messages around the resume time. Compare a working launch before sleep with the failed launch after wake.</p>
+<p><strong>Check:</strong> The log identifies the failing capture or encoder stage.</p>
+<h3>Step 3: Stabilize the display path</h3>
+<p>For a headless or sleeping monitor, configure a persistent virtual display or prevent the display from powering off during the test. Change one display setting at a time.</p>
+<p><strong>Check:</strong> The host keeps a display available after the monitor sleeps.</p>
+<h3>Step 4: Test picture, sound, and controller</h3>
+<p>Connect from the client, start one game or desktop test, and confirm video, audio, and controller input in the same session.</p>
+<p><strong>Check:</strong> All three work together, not just the desktop image.</p>
+<h3>Step 5: Reconnect after a sleep cycle</h3>
+<p>Disconnect, put the host to sleep, wake it, and reconnect. Repeat once to prove the path is stable.</p>
+<p><strong>Check:</strong> The second wake also produces a working stream.</p>
+<h2>Verify the result</h2>
+<p>After a deliberate sleep/wake cycle, Moonlight shows the host picture, plays audio on the client, and accepts controller input.</p>
+<h2>Rollback</h2>
+<p>Restore the previous display sleep and Sunshine settings. Keep the old configuration export if the virtual display causes side effects.</p>
+<p><a href="/#consult">Ask for help with this exact symptom</a> · <a href="/guides/">All troubleshooting guides</a></p>

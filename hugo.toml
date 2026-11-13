@@ -1,13 +1,33 @@
 baseURL = "https://sunshine-moonlight-setup.pages.dev/"
 languageCode = "en-us"
-title = "Sunshine & Moonlight Streaming Setup"
+title = "Sunshine Moonlight Setup"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 [params]
-template_version = "v1.1.0"
-description = "Set up Sunshine on your own Windows PC and Moonlight on phone, tablet, or TV, then fix black screen, controller, stutter, and audio faults."
-category = "Gaming"
 source = "sunshine-moonlight-setup"
+description = "Remote help for Moonlight black screens after Windows sleep, display changes, and encoder resets."
 email = "hello@handytasklab.com"
+fallback_email_subject = "Sunshine Moonlight help"
+fallback_email_fields = ["Host GPU/Windows version", "Moonlight client", "Black screen or audio symptom", "Sleep/display settings"]
+og_image = "images/social.jpg"
+footer_line = "Remote help for one device at a time."
+latest_kicker = "FROM THE BLOG"
+latest_title = "Sunshine Moonlight Setup Guides"
+theme_bg = "#122B36"
+theme_surface = "#EEF0F1"
+theme_card = "#FFFFFF"
+theme_ink = "#182018"
+theme_muted = "#5D655F"
+theme_accent = "#79E3CC"
+theme_accent_ink = "#151515"
+theme_deep = "#0E222A"
+theme_deep_ink = "#FFFFFF"
+theme_header_ink = "#FFFFFF"
+theme_line = "#CCCFCE"
+theme_link = "#89E6D2"
+theme_scrim = "rgba(8,12,16,0.86)"
+theme_light = false
+hero_desktop_hd_width = 1920
+hero_mobile_hd_width = 768
 [markup.goldmark.renderer]
 unsafe = true
