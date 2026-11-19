@@ -3,7 +3,7 @@ title: "Sunshine Moonlight Diagnostic Kit"
 description: "A three-route field guide for black screens, pairing failures, and streams that break after sleep"
 layout: "product"
 draft: false
-price: ""
+price: "19.00"
 preview_pdf: "/downloads/sunshine-moonlight-setup-Free-Preview.pdf"
 ---
 
@@ -16,7 +16,7 @@ preview_pdf: "/downloads/sunshine-moonlight-setup-Free-Preview.pdf"
 </div>
 
 <div class="product-buybox">
-  <div><p class="product-kicker">What you get</p><p class="product-price">Price confirmed before launch</p><p class="small">The checkout button opens only after the price and payment product are confirmed.</p></div>
+  <div><p class="product-kicker">What you get</p><p class="product-price">USD 19.00</p><p class="small">One-time payment. Instant digital download. The checkout button opens after the Live product is confirmed.</p></div>
   <div class="product-cta-disabled" aria-disabled="true">Checkout opens after price confirmation</div>
 </div>
 
