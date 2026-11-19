@@ -17,7 +17,8 @@ preview_pdf: "/downloads/sunshine-moonlight-setup-Free-Preview.pdf"
 
 <div class="product-buybox">
   <div><p class="product-kicker">What you get</p><p class="product-price">USD 19.00</p><p class="small">One-time payment. Instant digital download. The checkout button opens after the Live product is confirmed.</p></div>
-  <div class="product-cta-disabled" aria-disabled="true">Checkout opens after price confirmation</div>
+  <a class="button product-buy" href="https://www.creem.io/product/prod_73zUd8NM2Ti28yDqb3G5FH" rel="noopener">Buy now — USD 19.00</a>
+<p class="small">Secure checkout by Creem. Instant ZIP download after payment.</p>
 </div>
 
 <h2>Three routes for this failure</h2>
