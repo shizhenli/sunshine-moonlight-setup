@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://sunshine-moonlight-setup.pages.dev/sitemap.xml
+
+Sitemap: https://sunshine-moonlight.handytasklab.com/sitemap.xml
