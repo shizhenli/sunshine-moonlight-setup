@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sunshine-moonlight.handytasklab.com/sitemap.xml
